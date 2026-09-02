@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="181dp"
+        android:text="MP3 Player"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="6dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/music_img" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="91dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/previous_button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginEnd="76dp"
+                android:backgroundTint="@color/material_dynamic_neutral20"
+                android:contentDescription="string/previous_button"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="50dp"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="@+id/skip_button"
+                app:layout_constraintEnd_toStartOf="@+id/skip_button"
+                app:layout_constraintTop_toTopOf="@+id/skip_button"
+                app:srcCompat="@drawable/baseline_skip_previous_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/skip_button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="100dp"
+                android:backgroundTint="@color/material_dynamic_neutral20"
+                android:contentDescription="string/skip_button"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="50dp"
+                app:fabSize="mini"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_skip_next_24" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/pause_button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginEnd="39dp"
+                app:backgroundTint="@color/material_dynamic_neutral20"
+                android:contentDescription="string/pause_button"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="50dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@+id/skip_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/baseline_pause_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/shuffle_button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginEnd="13dp"
+                android:backgroundTint="@color/material_dynamic_neutral20"
+                android:contentDescription="string/shuffle"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="50dp"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="@+id/previous_button"
+                app:layout_constraintEnd_toStartOf="@+id/previous_button"
+                app:srcCompat="@drawable/baseline_shuffle_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/red"
+                android:contentDescription="string/play_button"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="50dp"
+                app:fabSize="mini"
+                app:layout_constraintEnd_toStartOf="@+id/skip_button"
+                app:layout_constraintStart_toEndOf="@+id/previous_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_play_circle_24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="172dp"
+                android:layout_marginBottom="14dp"
+                android:text="Dosti Music Video"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/previous_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
